@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="app.WebServices.service.industryServices" CodeBehind="industryServices.svc.cs" %>

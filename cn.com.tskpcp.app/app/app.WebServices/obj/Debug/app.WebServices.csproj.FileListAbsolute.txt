@@ -1,0 +1,10 @@
+E:\ASP.NET\cn.com.tskpcp.app\app\app.WebServices\bin\app.WebServices.dll
+E:\ASP.NET\cn.com.tskpcp.app\app\app.WebServices\bin\app.WebServices.pdb
+E:\ASP.NET\cn.com.tskpcp.app\app\app.WebServices\bin\log4net.dll
+E:\ASP.NET\cn.com.tskpcp.app\app\app.WebServices\obj\Debug\app.WebServices.dll
+E:\ASP.NET\cn.com.tskpcp.app\app\app.WebServices\obj\Debug\app.WebServices.pdb
+D:\work\code\c#\iwayward_server\cn.com.tskpcp.app\app\app.WebServices\bin\app.WebServices.dll
+D:\work\code\c#\iwayward_server\cn.com.tskpcp.app\app\app.WebServices\bin\app.WebServices.pdb
+D:\work\code\c#\iwayward_server\cn.com.tskpcp.app\app\app.WebServices\obj\Debug\app.WebServices.dll
+D:\work\code\c#\iwayward_server\cn.com.tskpcp.app\app\app.WebServices\obj\Debug\app.WebServices.pdb
+D:\work\code\c#\iwayward_server\cn.com.tskpcp.app\app\app.WebServices\obj\Debug\app.WebServices.csprojResolveAssemblyReference.cache

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="iwayward" Class="iwaywardDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=iwayward;User ID=sa;Min Pool Size=4;Max Pool Size=4" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iwaywardConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CODE" Member="CODE">
+    <Type Name="CODE">
+      <Column Name="CodeID" Type="System.String" DbType="VarChar(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CodeFatherID" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="CodeIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodeValue1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CodeValue2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CodeValue3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CodeMark" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.industry" Member="industry">
+    <Type Name="industry">
+      <Column Name="IndID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IndName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IndChildID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IndChildName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AttentionIndustry" Member="AttentionIndustry">
+    <Type Name="AttentionIndustry">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IndID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IndMark1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IndID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IndMark2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IndID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IndMark3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comments" Member="comments">
+    <Type Name="comments">
+      <Column Name="commID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="serviceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="context" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="commDateTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonnelRelationship" Member="PersonnelRelationship">
+    <Type Name="PersonnelRelationship">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="objType" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="GUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IndID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceInformation" Member="ServiceInformation">
+    <Type Name="ServiceInformation">
+      <Column Name="ServicID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="serviceTyoe" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="IndID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sendTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="region" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="macrk" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(32,32)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(32,32)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.servicepipei" Member="servicepipei">
+    <Type Name="servicepipei">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ServicID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInfo" Member="UserInfo">
+    <Type Name="UserInfo">
+      <Column Name="userID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="headUrl" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="nickName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="region" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="qqNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sinaID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tengID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="baiduID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="weixinID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="weixinName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="weixinTwo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="professional" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="industry" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="erweima" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="zhuceTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qianming" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.smgInfo" Member="smgInfo">
+    <Type Name="smgInfo">
+      <Column Name="smgID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FromUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="smgtype" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="smgContext" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="smgimg" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="smgvioe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fromTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="toTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.companyTable" Member="companyTable">
+    <Type Name="companyTable">
+      <Column Name="companyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="companyName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="companyType" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="companyCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="describe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jobTable" Member="jobTable">
+    <Type Name="jobTable">
+      <Column Name="jobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="companyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="beginTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="endTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="describe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.positionInfo" Member="positionInfo">
+    <Type Name="positionInfo">
+      <Column Name="posID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="companyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="posName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="createTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="region" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="city" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="province" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="record" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="recruitment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="range" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="posstate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="posType" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="requirements" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.projectTable" Member="projectTable">
+    <Type Name="projectTable">
+      <Column Name="projectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="projectName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="projectType" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="beginTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="endTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="describe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="duties" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.regionTable" Member="regionTable">
+    <Type Name="regionTable">
+      <Column Name="provinceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="provinceName" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="cityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityName" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="regionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regionName" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.resume" Member="resume">
+    <Type Name="resume">
+      <Column Name="resumeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jobState" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="resumeState" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="myEdu" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="jobYear" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="toAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="industry" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="salary" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="research" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="jobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="projectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.resumeJob" Member="resumeJob">
+    <Type Name="resumeJob">
+      <Column Name="resumeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.resumePoject" Member="resumePoject">
+    <Type Name="resumePoject">
+      <Column Name="resumeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pojectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

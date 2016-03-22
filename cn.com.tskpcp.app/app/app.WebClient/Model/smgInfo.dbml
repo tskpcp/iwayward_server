@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="iwayward" Class="smgInfoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=CAOPENG-PC;Initial Catalog=iwayward;User ID=sa;Min Pool Size=4;Max Pool Size=4" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iwaywardConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.smgInfo" Member="smgInfo">
+    <Type Name="smgInfo">
+      <Column Name="smgID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FromUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="smgtype" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="smgContext" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="smgimg" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="smgvioe" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fromTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="toTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

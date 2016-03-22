@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="servicepipei">
+  <DataContextMoniker Name="/servicepipeiDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0fb74395-0675-45d3-a15c-25bfd421c4e3" absoluteBounds="2.75, 1.375, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/servicepipeiDataContext/servicepipei" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5fc05d7-9f6a-454a-b8f3-8bdb8dc39242" absoluteBounds="2.765, 1.835, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
